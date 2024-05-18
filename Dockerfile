@@ -19,7 +19,7 @@ COPY . .
 RUN apt-get update && apt-get install -y nodejs
 
 # Expose the port on which the application will run
-EXPOSE 8032
+EXPOSE 3000
 
 # Start the Rails application
 CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
