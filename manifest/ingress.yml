@@ -1,0 +1,17 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: budget-app-web-ingress
+spec:
+  rules:
+  - host: 35.174.213.247
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: budget-app-web-service
+            port:
+              number: 80
