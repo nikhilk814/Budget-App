@@ -4,7 +4,7 @@ metadata:
   name: budget-app-web-ingress
 spec:
   rules:
-  - host: 35.174.213.247
+  - host: foo.bar.com
     http:
       paths:
       - pathType: Prefix
