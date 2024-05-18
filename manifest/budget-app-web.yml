@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: budget-app-web
-          image: nikhilk814/budget-app_web:v1
+          image: nikhilk814/budget-app:v1 
           ports:
             - containerPort: 3000
           env:
