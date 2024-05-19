@@ -2,6 +2,8 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: budget-app-web-ingress
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
   - host: foo.bar.com
@@ -13,4 +15,6 @@ spec:
           service:
             name: budget-app-web-service
             port:
-              number: 80
+              number: 3000
+
+
