@@ -15,4 +15,4 @@ spec:
           service:
             name: budget-app-web-service
             port:
-              number: 3000
+              number: 80
