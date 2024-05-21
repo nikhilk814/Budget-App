@@ -1,0 +1,28 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  name: build-and-deploy-execution
+spec:
+  pipelineRef:
+    name: build-and-deploy-pipeline
+  params:
+    - name: gitUrl
+      value: https://github.com/nikhilk814/Budget-App.git
+    - name: gitRevision
+      value: HEAD
+    - name: imageUrl
+      value: docker.io/nikhilk814/budget-app
+    - name: imageTag
+      value: latest
+    - name: pathToContext
+      value: '.'
+  serviceAccountName: pipeline-runner
+  workspaces:
+    - name: git-source
+      volumeClaimTemplate:
+        spec:
+          accessModes: 
+          - ReadWriteOnce
+          resources:
+            requests:
+              storage: 2Gi

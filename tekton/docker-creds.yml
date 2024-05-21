@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: docker-credentials
+  annotations:
+    tekton.dev/docker-0: "https://index.docker.io/v1/"
+type: kubernetes.io/dockerconfigjson
+data:
+  .dockerconfigjson: ewoJImF1dGhzIjogewoJCSJodHRwczovL2luZGV4LmRvY2tlci5pby92MS8iOiB7CgkJCSJhdXRoIjogImJtbHJhR2xzYXpneE5EbzVOell5TkRZek5qWTRRQ009IgoJCX0KCX0KfQ==ubuntu@ip-172-31-49-162
+
+
+
+
+
+
+
+
+
+
+
+
+
